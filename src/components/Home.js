@@ -1,7 +1,11 @@
-
+import Hero from "./Hero"
+import Bio from "./Bio"
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Hero/>
+      <Bio/>
+    </div>
   )
 }
 
