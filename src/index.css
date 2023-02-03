@@ -28,6 +28,7 @@ body{
   line-height: 1.6;
   letter-spacing: 2px;
   word-spacing: 3px;
+  font-family: 'Michroma', sans-serif;
 }
 .app{
   position: relative;
@@ -64,7 +65,9 @@ transform: translateX(-50%);
 .hero{
   position: relative;
 }
-.hero-img{
+.hero-img,
+.project-right
+{
   height: 500px;
   width: 500px;
   overflow: hidden;
@@ -108,3 +111,10 @@ animation: spin 90s linear infinite;
   bottom: -40%;
   right:-20%;
 }
+
+.section-title{
+  font-family: "Cosi Azure", sans-serif;
+  font-size: 10rem;
+  line-height: 1;
+}
+
