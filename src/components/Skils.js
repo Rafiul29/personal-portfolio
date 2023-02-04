@@ -17,7 +17,7 @@ const Skils = () => {
   return (
     <div className=" skills container  mx-auto mt-40" id="skills">
       <SectionTitle title={"Skills"} />
-      <div className="skills-wrapper grid grid-cols-2 gap-2 mt-40">
+      <div className="skills-wrapper grid grid-cols-2 gap-10 mt-40">
         <ul className="skills-left flex flex-col gap-10">
           {data
             .filter((_, i) => i < Math.floor(data.length / 2))
