@@ -1,19 +1,36 @@
-import {Routes,Route} from "react-router-dom"
-import Footer from "./components/Footer"
-import Home from './components/Home'
-import Navbar from "./components/Navbar"
+import { useRef } from "react";
+import { Routes, Route } from "react-router-dom";
+import CustomCursor from "./components/CustomCursor";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+import Socials from "./components/Socials";
+import { useCustomCursor } from "./Hooks/useCustomCursor";
+import { useSmoothScroll } from "./Hooks/useSmoothScroll";
 
 const App = () => {
-  return <div className='app'>
-    <div className="noise"></div>
-    <Navbar/>
-    <Routes>
-      <Route path="/" element={<Home/>}/>
-    </Routes>
-    <Navbar footerNav />
-    <Footer/>
-  </div>
-  
-}
+  const innerCursorRef = useRef(null);
+  const outerCursorRef = useRef(null);
 
-export default App
+  useSmoothScroll();
+  useCustomCursor(innerCursorRef, outerCursorRef);
+  
+  return (
+    <div className="app">
+      <div className="noise"></div>
+      <CustomCursor
+        innerCursorRef={innerCursorRef}
+        outerCursorRef={outerCursorRef}
+      />
+      <Navbar />
+      <Socials />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <Navbar footerNav />
+      <Footer />
+    </div>
+  );
+};
+
+export default App;

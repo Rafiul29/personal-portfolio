@@ -15,6 +15,10 @@
   --color-drak:#050505;
   --color-light:#f7f7f7;
 }
+
+*,*::after,*::before{
+  cursor: none;
+}
 html,body{
   overflow-x: hidden;
 }
@@ -30,6 +34,42 @@ body{
   word-spacing: 3px;
   font-family: 'Michroma', sans-serif;
 }
+
+.inner-cursor{
+  position: fixed;
+  left: 10px;
+  z-index: 9999;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-light);
+  transform: translate(-50%,-50%);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transition: width 0.5s ,height 0.5s;
+}
+
+.inner-cursor.grow{
+  width: 25px;
+  height: 25px;
+  transition: width 0.5s ,height 0.5s;
+}
+
+.outter-cursor{
+  position: fixed;
+  left: 10px;
+  z-index: 9999;
+  width: 25px;
+  height:25px;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  border: 1px solid var(--color-light);
+  transition: 0.1s;
+
+}
+
 .app{
   position: relative;
 }
