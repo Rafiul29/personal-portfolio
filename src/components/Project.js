@@ -1,13 +1,23 @@
 import { useRef } from "react";
 import { useHoverEffect } from "../Hooks/useHoverEffect";
-
+import { useProjectLeftrightReveal } from "../Hooks/gsap";
 const Project = ({ project }) => {
-  const useProjectImageRef = useRef(null);
 
-  useHoverEffect(useProjectImageRef, project.img1, project.img2);
+  const projectRightRef = useRef(null);
+  const projectLeftRef = useRef(null);
+
+  const projectRefs = [projectRightRef, projectLeftRef];
+
+  useHoverEffect(projectRightRef, project.img1, project.img2);
+
+  useProjectLeftrightReveal(projectRefs);
+
   return (
-    <div className="project grid grid-cols-5">
-      <div className="project-left col-span-3 flex flex-col gap-10">
+    <div className="project grid grid-cols-5 overflow-hidden">
+      <div
+        className="project-left col-span-3 flex flex-col gap-10"
+        ref={projectLeftRef}
+      >
         <span className="text-9xl text-white/20">
           {String(project.id).padStart(2, 0)}
         </span>
@@ -36,24 +46,24 @@ const Project = ({ project }) => {
             rel="noreferrer"
             className="uppcase py-8 px-14 border border-white/25 rounded-full hover:bg-cyan-400/20 hover:border-cyan-400/20 duration-500"
           >
-            Font-End code 
+            Font-End code
           </a>
 
           {project.backEndLink && (
             <a
-            href={project.backEndLink}
-            target="_blank"
-            rel="noreferrer"
-            className="uppcase py-8 px-14 border border-white/25 rounded-full hover:bg-cyan-400/20 hover:border-cyan-400/20 duration-500"
-          >
-           Back-End Code
-          </a>
+              href={project.backEndLink}
+              target="_blank"
+              rel="noreferrer"
+              className="uppcase py-8 px-14 border border-white/25 rounded-full hover:bg-cyan-400/20 hover:border-cyan-400/20 duration-500"
+            >
+              Back-End Code
+            </a>
           )}
         </div>
       </div>
       <div
         className="project-right col-span-2 justify-self-end"
-        ref={useProjectImageRef}
+        ref={projectRightRef}
       ></div>
     </div>
   );

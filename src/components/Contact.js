@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import SectionTitle from "./SectionTitle";
+import {useInputFieldReveal} from "../Hooks/gsap"
+
 
 const Contact = () => {
+
+const nameRef=useRef(null)
+const emailRef=useRef(null)
+const messageRef=useRef(null)
+const btnRef=useRef(null)
+
+const contactFieldRef=[nameRef,emailRef,messageRef,btnRef]
+
+useInputFieldReveal(contactFieldRef,1.5)
+
   const sendEmail=(e)=>{
       e.preventDefault()
 
@@ -16,7 +28,7 @@ const Contact = () => {
       <SectionTitle title={"contact"} />
 
       <form onSubmit={sendEmail} className="mt-40 grid grid-cols-2 gap-20">
-        <div className="from-control overflow-hidden">
+        <div className="from-control overflow-hidden" ref={nameRef}>
           <input
             type="text"
             placeholder="Write your name"
@@ -25,7 +37,7 @@ const Contact = () => {
             className=" fullname bg-transparent border py-16 px-28 rounded-full border-white/20 outline-none focus:border-cyan-400 duration-300 w-full"
           />
         </div>
-        <div className="from-control overflow-hidden">
+        <div className="from-control overflow-hidden" ref={emailRef}>
           <input
             type="email"
             placeholder="Write your email"
@@ -34,7 +46,7 @@ const Contact = () => {
             className="email bg-transparent border py-16 px-28 rounded-full border-white/20 outline-none focus:border-cyan-400 duration-300 w-full"
           />
         </div>
-        <div className="from-control overflow-hidden">
+        <div className="from-control overflow-hidden" ref={messageRef}>
           <textarea
             placeholder="Write your message"
             name="message"
@@ -45,7 +57,7 @@ const Contact = () => {
           />
         </div>
 
-        <div className="from-control overflow-hidden">
+        <div className="from-control overflow-hidden" ref={btnRef}>
           <input
             type="submit"
             value="Send message"
