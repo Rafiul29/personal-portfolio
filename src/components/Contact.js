@@ -1,9 +1,11 @@
 import React, { useRef } from "react";
 import SectionTitle from "./SectionTitle";
 import {useInputFieldReveal} from "../Hooks/gsap"
-
+import emailjs from "@emailjs/browser"
 
 const Contact = () => {
+
+const formRef=useRef(null)
 
 const nameRef=useRef(null)
 const emailRef=useRef(null)
@@ -17,17 +19,30 @@ useInputFieldReveal(contactFieldRef,1.5)
   const sendEmail=(e)=>{
       e.preventDefault()
 
+      //emailjs integration
+    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID,
+      process.env.REACT_APP_TEMPLETE_ID,
+      formRef.current,
+      process.env.REACT_APP_PUBLIC_ID
+      ).then(()=>{
+        console.log("Message sent")
+      },()=>{
+        console.log("message not send")
+      })
+
       //rest
-      
-      // console.log(e.target.querySelector(".fullname").value)
-      // console.log(e.target.querySelector(".email").value)
-      // console.log(e.target.querySelector(".message").value)
+      e.target.querySelector(".fullname").value=""
+      e.target.querySelector(".email").value=""
+      e.target.querySelector(".message").value=""
+
   }
   return (
     <div className="contact container mx-auto mt-40" id="contact">
       <SectionTitle title={"contact"} />
 
-      <form onSubmit={sendEmail} className="mt-40 grid grid-cols-2 gap-20">
+      <form onSubmit={sendEmail}   className="mt-40 grid grid-cols-2 gap-20"
+      ref={formRef}
+      >
         <div className="from-control overflow-hidden" ref={nameRef}>
           <input
             type="text"
