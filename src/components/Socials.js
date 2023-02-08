@@ -6,20 +6,21 @@ const data = [
     title: "Facebook",
     url: "https://www.facebook.com/rafiulislam.rafi.1234/",
   },
+ 
   {
     id: 2,
-    title: "Twitter",
-    url: "https://www.facebook.com/rafiulislam.rafi.1234/",
+    title: "Github",
+    url: "https://github.com/Rafiul29",
   },
   {
     id: 3,
-    title: "Github",
-    url: "https://www.facebook.com/rafiulislam.rafi.1234/",
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/md-rafiul-islam-a70699184/",
   },
   {
     id: 4,
-    title: "LinkedIn",
-    url: "https://www.facebook.com/rafiulislam.rafi.1234/",
+    title: "Twitter",
+    url: "",
   },
 ];
 

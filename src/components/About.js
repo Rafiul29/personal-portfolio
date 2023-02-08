@@ -4,8 +4,8 @@ import SectionTitle from './SectionTitle'
 
 import { useProjectLeftrightReveal } from '../Hooks/gsap'
 const data={
-  img1:"https://images.pexels.com/photos/8473286/pexels-photo-8473286.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  img2:"https://images.pexels.com/photos/12877898/pexels-photo-12877898.jpeg?auto=compress&cs=tinysrgb&w=1600"
+  img1:"https://res.cloudinary.com/dgjjgijyu/image/upload/v1675865685/portfolio-project/about-1_jbpixu.jpg",
+  img2:"https://res.cloudinary.com/dgjjgijyu/image/upload/v1675865996/portfolio-project/about-2_zbmidh.jpg"
 }
 const About = () => {
   const aboutLeftRef=useRef(null)
@@ -22,8 +22,8 @@ const About = () => {
       <div className="about-wrapper mt-40 grid grid-cols-2 gap-20 overflow-hidden">
         <div className="about-left" ref={aboutLeftRef}></div>
         <div className="about-right " ref={aboutRightRef}>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt deserunt quod sapiente voluptate nam incidunt non minus quos, at quaerat totam. Consequuntur fugiat quis voluptates impedit alias. Tempora distinctio aut beatae quae natus itaque iure odio rerum illo quisquam! Quos, quasi et numquam aperiam facilis quo asperiores suscipit facere iure!</p>
-          <p className='mt-10'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt deserunt quod sapiente voluptate nam incidunt non minus quos, at quaerat totam. Consequuntur fugiat quis voluptates impedit alias. Tempora distinctio aut beatae quae natus itaque iure odio rerum illo quisquam! Quos, quasi et numquam aperiam facilis quo asperiores suscipit facere iure! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, perferendis dolores. Quis, ipsum amet voluptatibus aliquid neque tempore qui assumenda!</p>
+          <p>I am a front-end developer focusing on React and Redux, with a strong emphasis on Tailwind CSS. This portfolio website showcases my skills and projects as a web developer, and provides a platform for potential clients and employers to learn more about me and my work.</p>
+          <p className='mt-10'>Whether you are looking for a new web developer for your team or just interested in my work, this portfolio website provides a comprehensive look at my skills and experience. If you have any questions or would like to learn more about my work, please feel free to reach out via the contact form on the website.</p>
           <a
             href="https://www.google.com"
             target="_blank"

@@ -5,27 +5,26 @@ const data = [
   {
     id: 1,
     title:
-      "A product title is something where you list your product",
-    img1: "https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    img2: "https://images.pexels.com/photos/355935/pexels-photo-355935.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "React shopping -tech alpha Electroinc store web application",
+    img1: "https://res.cloudinary.com/dgjjgijyu/image/upload/v1675860786/portfolio-project/tech-alpha-01_qtc6qh.png",
+    img2: "https://res.cloudinary.com/dgjjgijyu/image/upload/v1675860785/portfolio-project/tech-alpha-02_engilf.png",
     describe:
-      "Keywords should be placed as exact match, starting with the most important term and following with the brand at the end. If the brand is in the domain, this is already going to be a known match for the query",
-    tools: ["Node Js", "MongoDB", "JWT", "Firebase", "Tailwind CSS"],
-    liveLink: "https://www.google.com",
-    fontEndLink: "https://www.google.com",
-    backEndLink: "https://www.google.com",
+      "This repository contains the code for a React e-commerce shopping cart application, implemented using Redux Toolkit and data fetching with Redux Thunk. The shopping cart uses local storage to save data and display items in the browser.",
+    tools: ["React js", "Redux", "Redux Toolkit", "Redux Thunk", "Tailwind CSS"],
+    liveLink: "https://rafiul-tech-alpha.netlify.app/",
+    fontEndLink: "https://github.com/Rafiul29/tech-alpha.git",
   },
   {
     id: 2,
     title:
-      "Page titles should be descriptive and relevant to the content",
-    img1: "https://images.pexels.com/photos/890065/pexels-photo-890065.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    img2: "https://images.pexels.com/photos/3098683/pexels-photo-3098683.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "Cyberbullying-Cyber | Stand Up Against Cyberbullying.",
+    img1: "https://res.cloudinary.com/dgjjgijyu/image/upload/v1675864972/portfolio-project/Cyberbulling-1_h9kqmx.png",
+    img2: "https://res.cloudinary.com/dgjjgijyu/image/upload/v1675864971/portfolio-project/cyerBulling-2_seq9nc.png",
     describe:
-      "A website title identifies what the web page is about for both web users and search engines. On web browsers, the website title appears at the top of the tab or window, and in search results website titles display as bold hyperlinked texts.",
-    tools: ["Node Js", "MongoDB", "JWT", "Firebase", "Tailwind CSS"],
-    liveLink: "https://www.google.com",
-    fontEndLink: "https://www.google.com",
+      "This is a website about cyberbullying, providing information and resources on the topic. The website aims to raise awareness about cyberbullying, its effects, and ways to prevent and address it. The site includes educational content, tips for staying safe online, and resources for individuals and families affected by cyberbullying.",
+    tools: ["React", "Tailwind CSS", "Gsap", ],
+    liveLink: "https://rafiul-cyberbullying.netlify.app/",
+    fontEndLink: "https://github.com/Rafiul29/cyberbullying.git",
    
   },
 ];
