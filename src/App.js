@@ -8,6 +8,9 @@ import Socials from "./components/Socials";
 import { useCustomCursor } from "./Hooks/useCustomCursor";
 import { useSmoothScroll } from "./Hooks/useSmoothScroll";
 
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.min.css';
+
 const App = () => {
   const innerCursorRef = useRef(null);
   const outerCursorRef = useRef(null);
@@ -24,6 +27,7 @@ const App = () => {
       />
       <Navbar />
       <Socials />
+      <ToastContainer/>
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>

@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import SectionTitle from "./SectionTitle";
 import {useInputFieldReveal} from "../Hooks/gsap"
 import emailjs from "@emailjs/browser"
+import { toast } from 'react-toastify';
+
 
 const Contact = () => {
 
@@ -25,9 +27,28 @@ useInputFieldReveal(contactFieldRef,1.5)
       formRef.current,
       process.env.REACT_APP_PUBLIC_ID
       ).then(()=>{
-        console.log("Message sent")
+
+        toast.success('🦄 Message Send Success', {
+          position: "bottom-left",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
       },()=>{
-        console.log("message not send")
+        toast.error('🦄 Message Not Send Success', {
+          position: "bottom-left",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
       })
 
       //reset
