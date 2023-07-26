@@ -21,7 +21,7 @@ useInputFieldReveal(contactFieldRef,1.5)
 
       //emailjs integration
     emailjs.sendForm(process.env.REACT_APP_SERVICE_ID,
-      process.env.REACT_APP_TEMPLETE_ID,
+      process.env.REACT_APP_TEMPLATE_ID,
       formRef.current,
       process.env.REACT_APP_PUBLIC_ID
       ).then(()=>{
@@ -30,12 +30,12 @@ useInputFieldReveal(contactFieldRef,1.5)
         console.log("message not send")
       })
 
-      //rest
+      //reset
       e.target.querySelector(".fullname").value=""
       e.target.querySelector(".email").value=""
       e.target.querySelector(".message").value=""
-
   }
+
   return (
     <div className="contact container mx-auto mt-40" id="contact">
       <SectionTitle title={"contact"} />
